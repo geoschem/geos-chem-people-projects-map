@@ -1,0 +1,40 @@
+
+
+/***MODIFICATiON: Add style for GREEN (bmy, 3/27/14) ***/
+.green {
+	color: #009900;
+}
+
+/***MODIFICATiON: Add style for RED (bmy, 3/27/14) ***/
+.red {
+	color: #FF0000;
+}
+
+/***MODIFICATiON: Add style for BLUE (bmy, 3/27/14) ***/
+.blue {
+	color: #0000FF;
+}
+
+/***MODIFICATiON: Add style for YELLOW (bmy, 3/27/14( ***/
+.yellow { 
+	color: #CCCC00;
+}
+
+/***MODIFICATiON: Add style for BLACK (bmy, 3/27/14) ***/
+.black {
+	color: #000000;
+}
+
+/***MODIFICATiON: Add style for SILVER (bmy, 4/1/14) ***/
+.silver {
+	color: #666666;
+}
+
+/**************************************
+ *** ALUMNI MAP SETTINGS            ***
+ **************************************/
+ 
+ #mapid { 
+    height: 180px;
+    margin: auto;
+}
