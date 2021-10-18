@@ -69,6 +69,7 @@
   var os_c = document.createElement;os_c('header');os_c('nav');os_c('section');os_c('article');os_c('aside');os_c('footer');os_c('hgroup');os_c('figure');
 </script>
   <![endif]-->
+	<!-- Styles from saving web page form OpenScholar -->
 	<style type="text/css">
 		.MathJax_Hover_Frame {
 			border-radius: .25em;
@@ -731,6 +732,7 @@
 		}
 	</style>
 	
+	<!-- Style for final adjustments after saving web page form OpenScholar -->
 	<style type="text/css">
 
 		html {
@@ -1189,146 +1191,158 @@
 																					Meeting</a> (May 2019).
 																			</p>
 
+		
+																			<!-- Map from original ACMG website -->
+																			<p align="center">Legend: <strong><span class="red">Ph.D.'s</span> | <span class="blue">Postdocs</span> |<span class="green">Undergraduates</span> | <span class="yellow">Visitors</span> | <span class="black">Staff</span></strong></p>
+																			<div id="mapid" style="width:600px; height:400px; margin:auto; z-index: 1; margin-bottom: 2em; border: solid 4px #027ac6; border-radius: 1em;"></div>
+																			<script>
+
+																				var mymap = L.map('mapid', {
+																					center: [20, 15],
+																					zoom: 1,
+																					closePopupOnClick: true,
+																				});
 																			
+																				L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXN1bHByaXppbyIsImEiOiJjaXppc2ZoMm8wMWM2MndvZDh4ZW9kajdmIn0.OaaEoGU3JhNuY_ysmvmn4g', {
+																					maxZoom: 18,
+																					attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+																					'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+																					'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+																					id: 'mapbox.streets'
+																				}).addTo(mymap);
 
-		<p align="center">Legend: <strong><span class="red">Ph.D.'s</span> | <span class="blue">Postdocs</span> |<span class="green">Undergraduates</span> | <span class="yellow">Visitors</span> | <span class="black">Staff</span></strong></p>
+																						// L.marker([  41.788632,  -87.598756 ],{icon:greenIcon}).addTo(mymap).bindPopup("<a href='index.html#Abbot'>Dorian Abbot</a>");
+																						L.marker([  47.609070, -122.336845 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Achakulwisut'>Ploy Achakulwisut</a>");
+																						L.marker([  42.462507,  -71.267933 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Alvarado'>Matthew Alvarado</a>");
+																						// L.marker([  38.893818,  -77.028950 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Amos'>Helen Amos</a>");
+																						// L.marker([  48.708863,    2.148158 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Balkanski'>Yves Balkanski</a>");
+																						// L.marker([  46.223335,    6.146485 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Bey'>Isabelle Bey</a>");
+																						// L.marker([  42.367136,  -71.080176 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Breider'>Thomas Breider</a>");
+																						// L.marker([  37.689066, -121.717038 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Cameron-Smith'>Philip Cameron-Smith</a>");
+																						// L.marker([ -33.917329,  151.231267 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='index.html#Carouge'>Claire Carouge</a>");
+																						// L.marker([  29.717413,  -95.401820 ],{icon:greenIcon}).addTo(mymap).bindPopup("<a href='index.html#Cohan'>Daniel Cohan</a>");
+																						// L.marker([  30.450871,  -91.145076 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Corbitt'>Elizabeth Corbitt</a>");
+																						L.marker([  42.356735,   13.382851 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='index.html#Curci'>Gabriele Curci</a>");
+																						// L.marker([  34.201326, -118.171394 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Cusworth'>Daniel Cusworth</a>");
+																						// L.marker([  40.441096,   -3.686205 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='index.html#Dachs'>Jordi Dachs</a>");
+																						// L.marker([  39.751354, -104.993428 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Drury'>Easan Drury</a>");
+																						L.marker([  53.945546,   -1.056167 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Evans'>Mat Evans</a>");
+																						L.marker([  41.049554,  -74.049624 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='index.html#Fields'>Brendan Field</a>");
+																						L.marker([  41.003927,  -73.908807 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Fiore'>Arlene Fiore</a>");  
+																						// L.marker([  40.569094, -105.079258 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Fischer'>Emily Fischer</a>");
+																						// L.marker([ -34.405416,  150.879967 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Fisher'>Jenny Fisher</a>");
+																						L.marker([  30.441863,  -84.298512 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Holmes'>Christopher Holmes</a>");
+																						L.marker([  40.102527,  -88.227526 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#HHorowitz'>Hannah Horowitz</a>");
+																						L.marker([  40.345410,  -74.616210 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#LHorowitz'>Larry Horowitz</a>");
+																						L.marker([  46.860075, -113.985262 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Hu'>Lu Hu</a>");
+																						// L.marker([  37.783180, -122.397084 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Hudman'>Rynda Hudman Kay</a>");
+																						// L.marker([  39.719938, -105.120142 ],{icon:greenIcon}).addTo(mymap).bindPopup("<a href='index.html#Hsu'>Leslie Hsu</a>");
+																						// L.marker([ -33.441119,  -70.640815 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='index.html#Jorquera'>Hector Jorquera</a>");
+																						// L.marker([  34.058278, -118.414643 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Kim'>Patrick Kim</a>");
+																						// L.marker([  35.882159,  -78.873714 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Koplitz'>Shannon Koplitz</a>");
+																						// L.marker([  42.423978,  -76.493628 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Leibensperger'>Eric Leibensperger</a>");
+																						// L.marker([  46.731937, -117.154276 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Leung'>Fok-Yan Leung</a>");
+																						// L.marker([  34.068930, -118.445278 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Li'>Qinbin Li</a>");
+																						// L.marker([  38.411572, -121.389679 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Liang'>Jinyou Liang</a>");
+																						// L.marker([  42.377996,  -71.115964 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Liy'>Yang Li</a>");
+																						// L.marker([  42.453291,  -76.473535 ],{icon:greenIcon}).addTo(mymap).bindPopup("<a href='index.html#CLin'>Cynthia Lin</a>")
+																						// L.marker([  34.225726,  -77.944710 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Long'>Mike Long</a>");  
+																						// L.marker([  52.088086,    5.164166 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Maasakkers'>J.D. (Bram) Maasakkers</a>");  
+																						// L.marker([  64.857556, -147.836504 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Mao'>Jingqiu Mao</a>");
+																						L.marker([  50.583080,    5.559064 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='index.html#Mahieu'>Emanuel Mahieu</a>");
+																						L.marker([  51.524466,   -0.133890 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Marais'>Eloise Marais</a>");
+																						L.marker([  38.648756,  -90.310775 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Martin'>Randall Martin</a>");
+																						L.marker([  44.986594,  -93.183195 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Millet'>Dylan Millet</a>");
+																						L.marker([  43.130537,  -77.626057 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Murray'>Lee Murray</a>");
+																						// L.marker([  29.760630,  -95.366478 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='index.html#Murti'>Prashant Murti");
+																						L.marker([  43.781506,  -79.468555 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Nassar'>Ray Nassar</a>");
+																						L.marker([  55.944534,   -3.189327 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Palmer'>Paul Palmer</a>");
+																						L.marker([  37.459899,  126.951884 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Park'>Rokjin Park</a>");
+																						// L.marker([  40.730453,  -73.991452 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Parrella'>Justin Parrella</a>");
+																						// L.marker([ -35.282129,  149.124681 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Pickett-Heaps'>Christopher Pickett-Heaps</a>");
+																						// L.marker([  47.887875,    1.883942 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Poisson'>Nathalie Poisson</a>");
+																						L.marker([  17.594663,   78.123297 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Qureshi'>Asif Qureshi</a>");
+																						// L.marker([  36.076106,  -79.770913 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Rastigejev'>Yevgenii Rastigejev</a>");
+																						// L.marker([  48.854027,    2.328341 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Ravetta'>Francois Ravetta</a>");
+																						// L.marker([ -41.301838,  174.805098 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='index.html#Riedel'>Katja Riedel</a>");
+																						// L.marker([  48.799613,    2.141543 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='index.html#Saunois'>Marielle Saunois</a>");		  
+																						L.marker([  55.680242,   12.572345 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Schmidt'>Johan Schmidt</a>");
+																						// L.marker([  50.944481,    6.382359 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Schultz'>Martin Schultz</a>");
+																						// L.marker([  38.892956,  -77.047748 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Silvern'>Rachel Silvern</a>");
+																						// L.marker([  30.300349,  -97.765809 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Smith-Downey'>Nicole Smith-Downey</a>");
+																						// L.marker([  59.362776,   18.059171 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Soerensen'>Anne Soerensen</a>");
+																						// L.marker([  37.803546, -122.274958 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='index.html#Spiro'>Peter Spiro</a>");
+																						// L.marker([  53.806726,   -1.555880 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Sptacklen'>Dominick Spracklen</a>");
+																						// L.marker([  38.896663,  -77.019178 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Staudt'>Amanda Staudt</a>");
+																						L.marker([  52.621798,    1.239080 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='index.html#Suntharalingam'>Parvadha Suntharalingam</a>");
+																						L.marker([  22.416462,  114.210900 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Tai'>Amos Tai</a>");
+																						L.marker([  36.050079,  140.119488 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<strong><a href='index.html#Tanimoto'>National Institute<br>for Environmental Studies<br>Tsukuba, Japan</a></strong><ul><li><strong>Hiroshi Tanimoto</strong></li><li>Kohei Ikeda</li><li>Sachiko Okamoto</li><li>Kimiko Suto</li></ul>");
+																						// L.marker([  48.847089,    2.357467 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Turquety'>Solene Turquety</a>");
+																						L.marker([  50.736594,   -3.535405 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Unger'>Nadine Unger</a>"); 
+																						// L.marker([  53.380800,   -1.488011 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#ValMartin'>Maria Val Martin</a>");
+																						// L.marker([  49.807515,  -97.136712 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='index.html#FWang'>Feiyue Wang</a>");
+																						L.marker([  41.662744,  -91.554889 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#JunWang'>Jun Wang</a>");
+																						L.marker([  23.135454,  113.258011 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#QWang'>Qiaoqiao Wang</a>");
+																						// L.marker([  22.336917,  114.172402 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#XWang'>Xuan Wang</a>");
+																						L.marker([  29.723513,  -95.346421 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#YuxuanWang'>Yuxuan Wang</a>");
+																						// L.marker([  33.917788, -118.395234 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Wecht'>Kevin Wecht</a>");
+																						// L.marker([  47.117242,  -88.542554 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Wu'>Shiliang Wu</a>");
+																						// L.marker([  42.416209,  -71.127646 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Xiao'>Yaping Xiao</a>");
+																						// L.marker([  37.776554, -122.391981 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Yu'>Karen Yu</a>"); 
+																						// L.marker([  32.205419,  118.726967 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Yue'>Xu Yue</a>"); 
+																						// L.marker([  32.056939,  118.778686 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#YZhang'>Yanxu Zhang</a>");
+																						// L.marker([  30.133957,  120.079467 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#YuZhang'>Yuzhong Zhang</a>");
 
-		<div id="mapid" style="width:600px; height:400px; margin:auto; z-index: 1; margin-bottom: 2em; border: solid 4px #027ac6; border-radius: 1em;"></div>
-		<script>
+																						<!-- INSTITUTIONS WITH SEVERAL ALUMNI -->
+																						<!-- Harvard Smithsonian Center for Astrophysics -->
+																						// L.marker([  42.381437,  -71.128097 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#ChanMiller'>Christopher Chan Miller</a><br><a href='#HWang'>Huiqun (Helen) Wang</a>");
+																						<!-- Harvard University -->
+																						L.marker([  42.377986,  -71.117046 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='index.html#harvard'><strong>Harvard University<br>Cambridge, Massachusetts, USA</strong></a><br><strong>Harvard Atmospheric Chemistry Modeling Group</strong><ul><li>Daniel Jacob</li><li>Loretta Mickley</li><li>Bob Yantosca</li><li>Melissa Sulprizio</li><li>Lizzie Lundgren</li><li>Lucas Estrada</li></ul><strong>Harvard China Project</strong><ul><li>Michael McElroy</li></ul><strong>Biogeochemistry of Global Contaminents Research Group</strong><ul><li>Elsie Sunderland</li></ul>");
+																						// L.marker([  42.377986,  -71.117046 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='index.html#Sunderland'>Elsie Sunderland</a>");
+																						// Removed from above line: <a href='index.html#Santillana'>Mauricio Santillana</a><br> <br><a href='#Zoogman'>Peter Zoogman</a>
+																						// Temporarily commented link to Sutherland to demonstrate the link to Harvard University
+																						<!-- Laboratoire d'Aerologie, Toulouse, France -->
+																						L.marker([  43.562799,    1.480482 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Mari'>Celine Mari</a>");  
+																						// Removed from above line: <a href='index.html#Leriche'>Maud Leriche</a><br> <br><a href='#Thouret'>Valerie Thouret</a>
+																						<!-- KNMI -->
+																						L.marker([  52.101222,    5.178165 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Boersma'>Folkert Boersma</a>");
+																						// Removed from above line: <br><a href='#LeSager'>Philippe Le Sager</a>
+																						<!-- MIT -->
+																						L.marker([  42.360217,  -71.098403 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Heald'>Colette Heald</a><br><a href='#Selin'>Noelle Eckley Selin</a>");
+																						// Removed from above line: <br><br><a href='#Eastham'>Sebastian Eastham</a><br><a href='#Sheng'>Jian-Xiong Sheng</a>
+																						<!-- NASA GMAO -->
+																						L.marker([  38.992999,  -76.853639 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Keller'>Christoph Keller</a>");
+																						// Removed from above line: <a href='index.html#Chin'>Mian Chin</a><br><a href='#Duncan'>Bryan Duncan</a><br> <br><a href='#JLiu'>Junhua Liu</a>
+																						<!-- NASA Langley Research Center -->
+																						L.marker([  37.095825,  -76.385453 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Fairlie'>T. Duncan Fairlie</a><br><a href='index.html#HLiu'>Hongyu Liu</a>");
+																						// Removed from above line: <a href='#Travis'>Katherine Travis</a>
+																						<!-- NOAA Silver Springs Offices -->
+																						L.marker([  38.991807,  -77.029933 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Kopacz'>Monika Kopacz</a>");
+																						// Removed from above line: <br><a href='#JamesWang'>James Wang</a>
+																						<!-- Peking University -->
+																						L.marker([  39.986929,  116.305863 ],{icon:redIcon}).addTo(mymap).bindPopup("<strong><a href='index.html#peking'>Chinese Academy of Sciences<br>Beijing, China</a></strong><ul><li>Xi Chen</li><li>Chi Zhang</li><li>Liangzhong Cao</li></ul><strong>Institute of Atmospheric Physics</strong><ul><li>Ruijun Dang</li><li>Cheng Gong</li><li>Rui Han</li><li>Jiandong Li</li><li>Yimian Ma</li><li>Xu Yue</li><li>Yu Zhang</li></ul><strong>Institute of Earth Environment</strong><ul><li>Tian Feng</li><li>Xin Long</li><li>Shuyu Zhao</li><li>Zhuzi Zhao</li><li>Jiamao Zhou</li></ul><strong>Institute of Remote Sensing<br>and Digital Earth</strong><ul><li>Haofei Wang</li><li>Ying Zhang</li></ul><strong>Institute of Geochemistry</strong><ul><li>Runsheng Yin</li></ul><strong>Institute of Geographic Sciences and Natural Resources Research</strong><ul><li>Yawen Kong</li></ul><strong>Laboratory of Middle Atmosphere<br>and Global Environment Observation (LAGEO)</strong><ul><li>Yi Liu</li><li>Jing Wang</li><li>Sihong Zhu</li><li>Dongxu Yang</li><li>Zhaonan Cai</li></ul><strong>Shanghai Advanced Research Institude</strong><ul><li>Yongjian Huang</li></ul><strong>Anhui Institute of Optics and Fine Mechanics</strong><ul><li>Shuo Wang</li></ul>");
+																						// L.marker([  39.986929,  116.305863 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#JLin'>Jintai Lin</a><br><a href='index.html#LZhang'>Lin Zhang</a>");
+																						// Temporarily commented link to Sutherland to demonstrate the link to Harvard University
+																						<!-- Princeton University -->
+																						// L.marker([  40.344020,  -74.651488 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Mauzerall'>Denise Mauzerall</a><br><a href='#Paulot'>Fabien Paulot</a>");
+																						<!-- University of Washington -->
+																						L.marker([  47.654087, -122.309067 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='index.html#Alexander'>Becky Alexander</a><br><a href='index.html#Jaegle'>Lyatt Jaegl&eacute;</a>");
+																						// Removed from above line: <br><a href='#Turner'>Alexander Turner</a>
+																						<!-- Univertity of Toronto -->
+																						L.marker([  43.661187,  -79.397687 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='index.html#Jones'>Dylan Jones</a>");
+																						// Removed from above line: <br><a href='#Ellis'>Raluca Ellis</a>
+																						<!-- Georgia Tech -->
+																						L.marker([  33.778766,  -84.396053 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#YuhangWang'>Yuhang Wang</a>");
+																						// Removed from above line: <br><a href='#Kaiser'>Jennifer Kaiser</a><br><a href='#PLiu'>Pengfei Liu</a>
+																						<!--- SUSTech --->
+																						L.marker([  22.594018,  113.998929 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#Fu'>Tzung-May Fu</a>");
+																						// Removed from above line: <br><a href='#Zhu'>Lei Zhu</a>
+																		
+																				var popup = L.popup();
 
-		  var mymap = L.map('mapid', {
-		    center: [20, 15],
-		    zoom: 1,
-		    closePopupOnClick: true,
-		  });
-	  
-		  L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibXN1bHByaXppbyIsImEiOiJjaXppc2ZoMm8wMWM2MndvZDh4ZW9kajdmIn0.OaaEoGU3JhNuY_ysmvmn4g', {
-		    maxZoom: 18,
-		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-		    '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-		    'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		    id: 'mapbox.streets'
-		  }).addTo(mymap);
+																				mymap.on('click', onMapClick);
 
-                  L.marker([  41.788632,  -87.598756 ],{icon:greenIcon}).addTo(mymap).bindPopup("<a href='#Abbot'>Dorian Abbot</a>");
-                  L.marker([  47.609070, -122.336845 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Achakulwisut'>Ploy Achakulwisut</a>");
-                  L.marker([  42.462507,  -71.267933 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Alvarado'>Matthew Alvarado</a>");
-                  L.marker([  38.893818,  -77.028950 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Amos'>Helen Amos</a>");
-                  L.marker([  48.708863,    2.148158 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Balkanski'>Yves Balkanski</a>");
-                  L.marker([  46.223335,    6.146485 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Bey'>Isabelle Bey</a>");
-                  L.marker([  42.367136,  -71.080176 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Breider'>Thomas Breider</a>");
-                  L.marker([  37.689066, -121.717038 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Cameron-Smith'>Philip Cameron-Smith</a>");
-                  L.marker([ -33.917329,  151.231267 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='#Carouge'>Claire Carouge</a>");
-                  L.marker([  29.717413,  -95.401820 ],{icon:greenIcon}).addTo(mymap).bindPopup("<a href='#Cohan'>Daniel Cohan</a>");
-                  L.marker([  30.450871,  -91.145076 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Corbitt'>Elizabeth Corbitt</a>");
-                  L.marker([  42.356735,   13.382851 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='#Curci'>Gabriele Curci</a>");
-                  L.marker([  34.201326, -118.171394 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Cusworth'>Daniel Cusworth</a>");
-                  L.marker([  40.441096,   -3.686205 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='#Dachs'>Jordi Dachs</a>");
-                  L.marker([  39.751354, -104.993428 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Drury'>Easan Drury</a>");
-                  L.marker([  53.945546,   -1.056167 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Evans'>Mat Evans</a>");
-                  L.marker([  41.049554,  -74.049624 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='#Fields'>Brendan Field</a>");
-                  L.marker([  41.003927,  -73.908807 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Fiore'>Arlene Fiore</a>");  
-                  L.marker([  40.569094, -105.079258 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Fischer'>Emily Fischer</a>");
-                  L.marker([ -34.405416,  150.879967 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Fisher'>Jenny Fisher</a>");
-                  L.marker([  30.441863,  -84.298512 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Holmes'>Christopher Holmes</a>");
-                  L.marker([  40.102527,  -88.227526 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#HHorowitz'>Hannah Horowitz</a>");
-                  L.marker([  40.345410,  -74.616210 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#LHorowitz'>Larry Horowitz</a>");
-                  L.marker([  46.860075, -113.985262 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Hu'>Lu Hu</a>");
-                  L.marker([  37.783180, -122.397084 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Hudman'>Rynda Hudman Kay</a>");
-                  L.marker([  39.719938, -105.120142 ],{icon:greenIcon}).addTo(mymap).bindPopup("<a href='#Hsu'>Leslie Hsu</a>");
-                  L.marker([ -33.441119,  -70.640815 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='#Jorquera'>Hector Jorquera</a>");
-                  L.marker([  34.058278, -118.414643 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Kim'>Patrick Kim</a>");
-                  L.marker([  35.882159,  -78.873714 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Koplitz'>Shannon Koplitz</a>");
-                  L.marker([  42.423978,  -76.493628 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Leibensperger'>Eric Leibensperger</a>");
-                  L.marker([  46.731937, -117.154276 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Leung'>Fok-Yan Leung</a>");
-                  L.marker([  34.068930, -118.445278 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Li'>Qinbin Li</a>");
-                  L.marker([  38.411572, -121.389679 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Liang'>Jinyou Liang</a>");
-                  L.marker([  42.377996,  -71.115964 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Liy'>Yang Li</a>");
-                  L.marker([  42.453291,  -76.473535 ],{icon:greenIcon}).addTo(mymap).bindPopup("<a href='#CLin'>Cynthia Lin</a>")
-                  L.marker([  34.225726,  -77.944710 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Long'>Mike Long</a>");  
-                  L.marker([  52.088086,    5.164166 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Maasakkers'>J.D. (Bram) Maasakkers</a>");  
-                  L.marker([  64.857556, -147.836504 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Mao'>Jingqiu Mao</a>");
-                  L.marker([  50.583080,    5.559064 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='#Mahieu'>Emanuel Mahieu</a>");
-                  L.marker([  51.524466,   -0.133890 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Marais'>Eloise Marais</a>");
-                  L.marker([  38.648756,  -90.310775 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Martin'>Randall Martin</a>");
-                  L.marker([  44.986594,  -93.183195 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Millet'>Dylan Millet</a>");
-                  L.marker([  43.130537,  -77.626057 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Murray' >Lee Murray</a>");
-                  L.marker([  29.760630,  -95.366478 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='#Murti'>Prashant Murti");
-                  L.marker([  43.781506,  -79.468555 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Nassar'>Ray Nassar</a>");
-                  L.marker([  55.944534,   -3.189327 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Palmer'>Paul Palmer</a>");
-                  L.marker([  37.459899,  126.951884 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Park'>Rokjin Park</a>");
-                  L.marker([  40.730453,  -73.991452 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Parrella'>Justin Parrella</a>");
-                  L.marker([ -35.282129,  149.124681 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Pickett-Heaps'>Christopher Pickett-Heaps</a>");
-                  L.marker([  47.887875,    1.883942 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Poisson'>Nathalie Poisson</a>");
-                  L.marker([  17.594663,   78.123297 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Qureshi'>Asif Qureshi</a>");
-                  L.marker([  36.076106,  -79.770913 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Rastigejev'>Yevgenii Rastigejev</a>");
-                  L.marker([  48.854027,    2.328341 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Ravetta'>Francois Ravetta</a>");
-                  L.marker([ -41.301838,  174.805098 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='#Riedel'>Katja Riedel</a>");
-                  L.marker([  48.799613,    2.141543 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='#Saunois'>Marielle Saunois</a>");		  
-                  L.marker([  55.680242,   12.572345 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Schmidt'>Johan Schmidt</a>");
-                  L.marker([  50.944481,    6.382359 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Schultz'>Martin Schultz</a>");
-                  L.marker([  38.892956,  -77.047748 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Silvern'>Rachel Silvern</a>");
-                  L.marker([  30.300349,  -97.765809 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Smith-Downey'>Nicole Smith-Downey</a>");
-                  L.marker([  59.362776,   18.059171 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Soerensen'>Anne Soerensen</a>");
-                  L.marker([  37.803546, -122.274958 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='#Spiro'>Peter Spiro</a>");
-                  L.marker([  53.806726,   -1.555880 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Sptacklen'>Dominick Spracklen</a>");
-                  L.marker([  38.896663,  -77.019178 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Staudt'>Amanda Staudt</a>");
-                  L.marker([  52.621798,    1.239080 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='#Suntharalingam'>Parvadha Suntharalingam</a>");
-                  L.marker([  22.416462,  114.210900 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Tai'>Amos Tai</a>");
-                  L.marker([  36.050079,  140.119488 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='#Tanimoto'>Hiroshi Tanimoto</a>");
-                  L.marker([  48.847089,    2.357467 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Turquety'>Solene Turquety</a>");
-                  L.marker([  50.736594,   -3.535405 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Unger'>Nadine Unger</a>"); 
-                  L.marker([  53.380800,   -1.488011 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#ValMartin'>Maria Val Martin</a>");
-                  L.marker([  49.807515,  -97.136712 ],{icon:yellowIcon}).addTo(mymap).bindPopup("<a href='#FWang'>Feiyue Wang</a>");
-                  L.marker([  41.662744,  -91.554889 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#JunWang'>Jun Wang</a>");
-                  L.marker([  23.135454,  113.258011 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#QWang'>Qiaoqiao Wang</a>");
-                  L.marker([  22.336917,  114.172402 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#XWang'>Xuan Wang</a>");
-                  L.marker([  29.723513,  -95.346421 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#YuxuanWang'>Yuxuan Wang</a>");
-                  L.marker([  33.917788, -118.395234 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Wecht'>Kevin Wecht</a>");
-                  L.marker([  47.117242,  -88.542554 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Wu'>Shiliang Wu</a>");
-                  L.marker([  42.416209,  -71.127646 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Xiao'>Yaping Xiao</a>");
-                  L.marker([  37.776554, -122.391981 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Yu'>Karen Yu</a>"); 
-                  L.marker([  32.205419,  118.726967 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Yue'>Xu Yue</a>"); 
-                  L.marker([  32.056939,  118.778686 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#YZhang'>Yanxu Zhang</a>");
-                  L.marker([  30.133957,  120.079467 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#YuZhang'>Yuzhong Zhang</a>");
-
-                  <!-- INSTITUTIONS WITH SEVERAL ALUMNI -->
-                  <!-- Harvard Smithsonian Center for Astrophysics -->
-                  L.marker([  42.381437,  -71.128097 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#ChanMiller'>Christopher Chan Miller</a><br><a href='#HWang'>Huiqun (Helen) Wang</a>");
-                  <!-- Harvard University -->
-                  L.marker([  42.377986,  -71.117046 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='#Santillana'>Mauricio Santillana</a><br><a href='#Sunderland'>Elsie Sunderland</a><br><a href='#Zoogman'>Peter Zoogman</a>");
-                  <!-- Laboratoire d'Aerologie, Toulouse, France -->
-                  L.marker([  43.562799,    1.480482 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Leriche'>Maud Leriche</a><br><a href='#Mari'>Celine Mari</a><br><a href='#Thouret'>Valerie Thouret</a>");  
-                  <!-- KNMI -->
-                  L.marker([  52.101222,    5.178165 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Boersma'>Folkert Boersma</a><br><a href='#LeSager'>Philippe Le Sager</a>");
-                  <!-- MIT -->
-                  L.marker([  42.360217,  -71.098403 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Heald'>Colette Heald</a><br><a href='#Selin'>Noelle Eckley Selin</a><br><br><a href='#Eastham'>Sebastian Eastham</a><br><a href='#Sheng'>Jian-Xiong Sheng</a>");
-                  <!-- NASA GMAO -->
-                  L.marker([  38.992999,  -76.853639 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Chin'>Mian Chin</a><br><a href='#Duncan'>Bryan Duncan</a><br><a href='#Keller'>Christoph Keller</a><br><a href='#JLiu'>Junhua Liu</a>");          
-                  <!-- NASA Langley Research Center -->
-                  L.marker([  37.095825,  -76.385453 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Fairlie'>T. Duncan Fairlie</a><br><a href='#HLiu'>Hongyu Liu</a><a href='#Travis'>Katherine Travis</a>");		  
-                  <!-- NOAA Silver Springs Offices -->
-                  L.marker([  38.991807,  -77.029933 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Kopacz'>Monika Kopacz</a><br><a href='#JamesWang'>James Wang</a>");
-                  <!-- Peking University -->
-                  L.marker([  39.986929,  116.305863 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='index.html#JLin'>Jintai Lin</a><br><a href='#LZhang'>Lin Zhang</a>");  
-                  <!-- Princeton University -->
-                  L.marker([  40.344020,  -74.651488 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Mauzerall'>Denise Mauzerall</a><br><a href='#Paulot'>Fabien Paulot</a>");
-                  <!-- University of Washington -->
-                  L.marker([  47.654087, -122.309067 ],{icon:blueIcon}).addTo(mymap).bindPopup("<a href='#Alexander'>Becky Alexander</a><br><a href='#Jaegle'>Lyatt Jaegl&eacute;</a><br><a href='#Turner'>Alexander Turner</a>");
-		  <!-- Univertity of Toronto -->
-		  L.marker([  43.661187,  -79.397687 ],{icon:blackIcon}).addTo(mymap).bindPopup("<a href='#Jones'>Dylan Jones</a><br><a href='#Ellis'>Raluca Ellis</a>");
-		  <!-- Georgia Tech -->
-                  L.marker([  33.778766,  -84.396053 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#YuhangWang'>Yuhang Wang</a><br><a href='#Kaiser'>Jennifer Kaiser</a><br><a href='#PLiu'>Pengfei Liu</a>");
-		  <!--- SUSTech --->
-                  L.marker([  22.594018,  113.998929 ],{icon:redIcon}).addTo(mymap).bindPopup("<a href='#Fu'>Tzung-May Fu</a><br><a href='#Zhu'>Lei Zhu</a>");
-		    
-                  var popup = L.popup();
-
-                  mymap.on('click', onMapClick);
-
-                </script>
-
-
+																			</script>
 
 																			<h2>
 																				Listing of GEOS-Chem User Groups
@@ -1348,7 +1362,7 @@
 																				<tbody>
 																					<tr align="left" valign="top">
 																						<td>
-																							<h2>
+																							<a id="harvard"></a><h2>
 																								Harvard
 																								University<br><span
 																									class="size16b">Cambridge,
@@ -1541,6 +1555,7 @@
 
 																							<ul>
 																								<li>
+																									<!-- <a id="Sunderland"></a> -->
 																									<a href="https://www.seas.harvard.edu/directory/ems"
 																										target="_blank">Elsie
 																										Sunderland</a>
@@ -1950,7 +1965,7 @@
 																					<tr>
 																						<td>
 																							<p align="justify">
-																								We plan to integrate the
+																								<a id="Heald"></a>We plan to integrate the
 																								AER radiative transfer
 																								model (RRTMG) online
 																								into GEOS-Chem. We are
@@ -1975,7 +1990,7 @@
 
 																							<ul>
 																								<li>
-																									Matthew Alvarado
+																									<a id="Alvarado"></a>Matthew Alvarado
 																									(Staff Scientist);
 																									email: malvarad [at]
 																									aer.com
@@ -3175,7 +3190,7 @@
 																				<tbody>
 																					<tr align="left" valign="top">
 																						<td>
-																							<h2>
+																							<a id="peking"></a><h2>
 																								Chinese Academy of
 																								Sciences<br><span
 																									class="size16b">Beijing,
@@ -3646,7 +3661,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Tai"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.cuhk.edu.hk/sci/essc/people/tai_pk-Amos.html"
 																									target="_blank">Amos
@@ -3911,7 +3926,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group Leader:
+																								<a id="Fischer"></a><strong>Group Leader:
 																								</strong> <a
 																									href="http://www.atmos.colostate.edu/faculty/fischer.php"
 																									target="_blank">Emily
@@ -4035,7 +4050,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Collaborators:</strong>
+																								<a id="Fiore"></a><strong>Collaborators:</strong>
 																								<a
 																									href="https://geos-chem.seas.harvard.edu/geos-people#ldeo">Arlene
 																									Fiore</a> (LDEO /
@@ -4159,7 +4174,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Schmidt"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://johanalbrechtschmidt.wordpress.com/"
 																									target="_blank">Johan
@@ -4524,7 +4539,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Suntharalingam"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.uea.ac.uk/environmental-sciences/people/profile/p-suntharalingam"
 																									target="_blank">Parvada
@@ -4586,7 +4601,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Palmer"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.palmergroup.org/paul-palmer"
 																									target="_blank">Paul
@@ -4779,7 +4794,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Nassar"></a><strong>Group
 																									Leader:</strong> <a
 																									href="https://profils-profiles.science.gc.ca/en/profile/ray-nassar"
 																									target="_blank">Ray
@@ -4970,7 +4985,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Unger"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://emps.exeter.ac.uk/mathematics/staff/nu212"
 																									target="_blank">Nadine
@@ -5208,7 +5223,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Holmes"></a><strong>Group
 																									Leader:</strong><a
 																									href="https://acgc.eoas.fsu.edu/people/christopher-d-holmes/"
 																									target="_blank">Chris
@@ -5349,7 +5364,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="YuhangWang"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://apollo.eas.gatech.edu/people.html#Wang"
 																									target="_blank">Yuhang
@@ -5702,7 +5717,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="YuxuanWang"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.uh.edu/nsm/earth-atmospheric/people/faculty/yuxuan-wang/"
 																									target="_blank">Yuxuan
@@ -6023,7 +6038,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Qureshi"></a><strong>Group
 																									Leader:</strong> <a
 																									href="https://www.iith.ac.in/~asif/"
 																									target="_blank">Asif
@@ -6379,7 +6394,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="JunWang"></a><strong>Group
 																									Leaders:</strong><a
 																									href="https://www.engineering.uiowa.edu/faculty-staff/jun-wang"
 																									target="_blank">Jun
@@ -6548,7 +6563,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="QWang"></a><strong>Group
 																									Leader:</strong> <a
 																									href="https://ecins.jnu.edu.cn/teacher_show.php?id=65"
 																									target="_blank">Qiaoqiao
@@ -6739,7 +6754,7 @@
 
 																							<p>
 																								<strong>Group
-																									Contact:</strong> <a
+																									Contact:</strong> <a id="Boersma"></a><a
 																									href="https://www.knmi.nl/over-het-knmi/onze-mensen/folkert-boersma"
 																									target="_blank">Folkert
 																									Boersma</a>
@@ -6974,7 +6989,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Curci"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://pumpkin.aquila.infn.it/gabri/"
 																									target="_blank">Gabriele
@@ -7129,7 +7144,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Marais"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://maraisresearchgroup.co.uk/"
 																									target="_blank">Eloise
@@ -7212,7 +7227,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Mahieu"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://labos.ulg.ac.be/girpas/en/team/"
 																									target="_blank">Emmanuel
@@ -7621,7 +7636,7 @@
 
 																							<p>
 																								<strong>Group
-																									Leader:</strong> <a
+																									<a id="Selin"></a>Leader:</strong> <a
 																									href="http://www.selingroup.org/noelle-eckley-selin/"
 																									target="_blank">Noelle
 																									Selin</a> (Associate
@@ -7834,7 +7849,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Millet"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://atmoschem.umn.edu/people"
 																									target="_blank">Dylan
@@ -7955,7 +7970,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Hu"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://hs.umt.edu/luhu/people.php"
 																									target="_blank">Lu
@@ -8368,7 +8383,7 @@
 																									(Research Scientist)
 																								</li>
 																								<li>
-																									<a href="http://www.ckeller.ch/"
+																									<a id="Keller"></a><a href="http://www.ckeller.ch/"
 																										target="_blank">Christoph
 																										Keller</a>
 																									(Research Scientist)
@@ -8524,7 +8539,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Fairlie"></a><strong>Group
 																									Contact:</strong> T.
 																								Duncan Fairlie (Research
 																								Scientist); email
@@ -8704,7 +8719,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="HLiu"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://research.nianet.org/~hyl/"
 																									target="_blank">Hongyu
@@ -8746,7 +8761,7 @@
 																					<tr align="left" valign="top">
 																						<td>
 																							<h2>
-																								National Institute for
+																								<a id="Tanimoto"></a>National Institute for
 																								Environmental
 																								Studies<br><span
 																									class="size16b">Tsukuba,
@@ -9416,7 +9431,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Kopacz"></a><strong>Group
 																									Leader:</strong>
 																								Monika Kopacz (Program
 																								manager); email:
@@ -9821,7 +9836,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Fu"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.phy.pku.edu.cn/atmoschem/index.php/Tzung-May_FU"
 																									target="_blank">Tzung-May
@@ -10076,7 +10091,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="LZhang"></a><strong>Group
 																									Leader:</strong><a
 																									href="http://www.phy.pku.edu.cn/~acaq/group.html"
 																									target="_blank"> Lin
@@ -10586,7 +10601,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Murray"></a><strong>Group
 																									Leader:</strong> Lee
 																								T. Murray (Assistant
 																								Professor)
@@ -10852,7 +10867,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Park"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://airchem.snu.ac.kr/rjpark/index.html"
 																									target="_blank">Rokjin
@@ -11474,7 +11489,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Jones"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.atmosp.physics.utoronto.ca/~jones/"
 																									target="_blank">Dylan
@@ -11569,7 +11584,7 @@
 																							<p>
 																								<strong>Group
 																									Leader:</strong>
-																								Celine Mari (Director)
+																								<a id="Mari"></a>Celine Mari (Director)
 																							</p>
 
 																							<p>
@@ -11858,7 +11873,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Alexander"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.atmos.washington.edu/blog/beckya/becky-alexander/"
 																									target="_blank">Becky
@@ -11924,7 +11939,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Jaegle"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.atmos.washington.edu/~jaegle/group/lyatt.html"
 																									target="_blank">Lyatt
@@ -11994,7 +12009,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Martin"></a><strong>Group
 																									Leader:</strong> <a
 																									href="https://engineering.wustl.edu/Profiles/Pages/Randall-Martin.aspx"
 																									target="_blank">Randall
@@ -12275,7 +12290,7 @@
 																							</p>
 
 																							<p>
-																								<strong>Group
+																								<a id="Evans"></a><strong>Group
 																									Leader:</strong> <a
 																									href="http://www.york.ac.uk/chemistry/staff/academic/d-g/evansm/"
 																									target="_blank">Mat
